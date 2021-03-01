@@ -1,8 +1,8 @@
 # ✈️📅 Travel App
 
 ## Description
+A travel web app that allows user to enter destination city, departure date, and arrival date, then The tool will return data from four API's [Geonames API](https://www.geonames.org/),[Restcountries API](https://restcountries.eu/), [pixabay API](https://pixabay.com/service/about/api/), [Weatherbit](https://www.weatherbit.io/), after receiving the data the UI will be updated to show trip details for the user such as city name, country, flag, departure date, and arrival date, trip duration, and weather description alongside with temperature for the user destination.
 
-A travel web app that allows user to enter destination city, departure date, and arrival date, then The tool will return data from four API's [Geonames API](https://www.geonames.org/),[Restcountries API](https://restcountries.eu/), [pixabay API](https://pixabay.com/service/about/api/), [Weatherbit](https://www.weatherbit.io/), after receiving the data the UI will be updated to show trip details for the user such as city name, country, flag, departure date, and arrival date, trip duration, and weather description alongside with reporter for the user destination.
 ## 🧰 Built with
 
 - HTML
