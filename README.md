@@ -1,4 +1,4 @@
-# 📰 Evaluate News Article with Natural Language Processing (NLP)
+# ✈️📅 Travel App
 
 ## Description
 
