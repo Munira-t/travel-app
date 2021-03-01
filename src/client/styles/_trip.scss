@@ -1,0 +1,239 @@
+.trip-section {
+  color: $light-color;
+  margin: 160px 15px 160px;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 10px;
+}
+
+.trip-container {
+  display: grid;
+  grid-template-rows: repeat (2, 1fr);
+  grid-template-areas:
+    ' trip-header  trip-header trip-header'
+    ' trip-main    trip-main   trip-main';
+}
+
+.trip-header {
+  grid-area: trip-header;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  opacity: 0.8;
+
+  #city-flag {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    height: 100px;
+    width: 115px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+
+  .location-name {
+    margin: 35px 40px 40px;
+
+    #country-name {
+      font-family: $font-stack;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-size: 25px;
+      color: $light-color;
+      text-shadow: 0 1px 0px $base-color;
+    }
+
+    #city-name {
+      margin-top: 10px;
+      font-family: $font-stack;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 23px;
+      color: $light-color;
+      text-shadow: 0 1px 0px $base-color;
+    }
+  }
+}
+
+.trip-main {
+  grid-area: trip-main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ' trip-weather  trip-info trip-info';
+  background-color: lighten($base-color, 15%);
+  opacity: 0.7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.trip-weather {
+  grid-area: trip-weather;
+  margin: 60px 30px 60px 50px;
+
+  #weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  #weather-temp {
+    margin-top: 10px;
+    font-family: $font-stack;
+    text-align: center;
+    color: $light-color;
+    font-size: 40px;
+  }
+
+  #weather-description {
+    margin-top: 15px;
+    font-family: $font-stack;
+    text-align: center;
+    font-size: 14px;
+    color: lighten($base-color, 70%);
+  }
+}
+
+.trip-info {
+  grid-area: trip-info;
+  margin: 50px 40px auto 10px;
+  font-family: $font-stack;
+
+  .trip-title {
+    margin-bottom: 25px;
+    margin-left: 10px;
+    font-family: $font-stack;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 20px;
+  }
+
+  .trip-date {
+    display: flex;
+    justify-content: space-between;
+
+    .start-date-section {
+      margin-right: 30px;
+
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      #departure-date {
+        margin-top: 14px;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      #departure-day {
+        margin-top: 9px;
+        font-size: 18px;
+        font-weight: 100;
+        text-align: center;
+        color: $primary-color;
+      }
+    }
+
+    .end-date-section {
+      margin-right: 30px;
+
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      #arrival-date {
+        margin-top: 14px;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      #arrivel-day {
+        margin-top: 9px;
+        font-size: 18px;
+        font-weight: 100;
+        text-align: center;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .trip-duration-section {
+    margin: 40px 0px 70px 40px;
+
+    p {
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    #trip-duration {
+      margin-top: 9px;
+      font-size: 20px;
+      font-weight: 100;
+    }
+  }
+}
+
+/* Mobile Screen */
+@media screen and (min-width: 522px) {
+  .trip-section {
+    margin-right: 70px;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .trip-section {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  .trip-info {
+    margin-right: 60px;
+    margin-left: 40px;
+
+    .trip-duration-section {
+      margin-left: 75px;
+    }
+  }
+}
+
+/* Tablet Screen */
+@media screen and (min-width: 735px) {
+  .trip-section {
+    margin-right: 170px;
+    margin-left: 190px;
+  }
+  .trip-info {
+    margin-right: 80px;
+    margin-left: 70px;
+
+    .trip-duration-section {
+      margin-left: 60px;
+    }
+  }
+  #weather-icon {
+    margin-left: 10px;
+  }
+}
+
+/* Desktop screen */
+@media screen and (min-width: 1024px) {
+  .trip-section {
+    margin-right: 245px;
+    margin-left: 260px;
+  }
+  #weather-icon {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .trip-section {
+    margin-right: 320px;
+    margin-left: 320px;
+  }
+}

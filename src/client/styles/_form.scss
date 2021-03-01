@@ -1,0 +1,133 @@
+@import 'config';
+
+.form-section {
+  display: flex;
+  background-color: lighten($base-color, 15%);
+  opacity: 0.7;
+  margin-right: 20px;
+  margin-left: -6px;
+  padding: 40px 20px 20px;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+  input {
+    padding: 10px;
+    border-color: none;
+    width: 100%;
+    height: 40px;
+    line-height: 30px;
+    margin: 10px 0;
+    border: 0;
+    background-color: none;
+    border-bottom: 1px solid $secondary-color;
+    background-color: lighten($base-color, 15%);
+
+    &:focus {
+      border: 0;
+      border-top: 0;
+      border-bottom: 3px solid $secondary-color;
+      background-color: lighten($base-color, 20%);
+      color: darken($secondary-color, 70%);
+    }
+  }
+
+  input[type='text'] {
+    padding-right: 50px;
+    color: $light-color;
+    font-family: $font-stack;
+  }
+
+  input[type='date'] {
+    padding-right: 50px;
+    color: $light-color;
+  }
+
+  label {
+    font-family: $font-stack;
+    font-size: 15px;
+    margin-top: 20px;
+    color: $light-color;
+  }
+}
+
+.btn {
+  margin: 35px 10px 25px 220px;
+  width: 80px;
+  height: 30px;
+  border-radius: 21px;
+  border: 0;
+  background-color: $primary-color;
+  font-family: $font-stack;
+  font-weight: 600;
+  color: $light-color;
+
+  &:hover {
+    background-color: lighten($primary-color, 10%);
+    font-family: $font-stack;
+    font-weight: 600;
+    color: $light-color;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+.fa-location-arrow {
+  font-size: 9px;
+  margin-right: 10px;
+  color: darken($light-color, 20%);
+  background-color: darken($secondary-color, 20%);
+  padding: 7px 7px;
+  border-radius: 30px;
+}
+
+.fa-calendar-alt {
+  font-size: 9px;
+  margin-right: 10px;
+  color: darken($light-color, 20%);
+  background-color: darken($secondary-color, 20%);
+  padding: 7px 7px;
+  border-radius: 30px;
+}
+
+/* Mobile Screen */
+@media screen and (min-width: 522px) {
+  .form-section {
+    margin-right: 60px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .form-section {
+    margin-right: 70px;
+    margin-left: 55px;
+  }
+}
+
+/* Tablet Screen */
+@media screen and (min-width: 768px) {
+  .form-section {
+    margin-right: 160px;
+    margin-left: 160px;
+  }
+}
+
+/* Desktop screen */
+@media screen and (min-width: 1024px) {
+  .form-section {
+    margin-right: 230px;
+    margin-left: 230px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .form-section {
+    margin-right: 310px;
+    margin-left: 290px;
+  }
+}

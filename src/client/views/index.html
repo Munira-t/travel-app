@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripit</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300&family=RocknRoll+One&display=swap"
+    rel="stylesheet">
+
+  <!-- Font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Page Container -->
+  <div class="page-container">
+
+    <!-- Page Header -->
+    <header class="header-page">
+      <h1>TripIt</h1>
+      <p>NEVER STOP EXPLORING THE WORLD</p>
+
+      <!-- form section -->
+      <section class="form-section">
+        <form id="trip-input-form">
+          <label for="destination-city"><i class="fas fa-location-arrow fa-1x"></i> Enter your destination</label>
+          <input id="destination-city" type="text" name="destination-city" value="" placeholder="Ex: Riyadh" />
+          <label for="departure-date"><i class="far fa-calendar-alt"></i>Check in</label>
+          <input id="departure-date" type="date" name="departure-date">
+          <label for="arrive-date"><i class="far fa-calendar-alt"></i>Check out</label>
+          <input id="arrive-date" type="date" name="arrive-date">
+          <button type="submit" class="btn" value="Submit">Go</button>
+        </form>
+        <!-- End of Form Section -->
+      </section>
+      <!-- End of Header -->
+    </header>
+
+    <!-- Main Section -->
+    <main class="main" id='main'>
+      <!-- Trip Section -->
+      <!-- End of Trip Section -->
+      <!-- End of Main -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Footer Section -->
+      <footer id="footer">
+        <div class="footer-container">
+          <div class="footer-items">
+            <nav class="footer-items__social">
+              <!-- Twitter icon -->
+              <li class=""><a href=""><i class="fab fa-twitter"></i></a></li>
+              <!-- instagram icon -->
+              <li class=""><a href=""><i class="fab fa-instagram "></i></a></li>
+              <!-- GitHub icon -->
+              <a href="https://github.com/Munira-t" target="_blank" class="social__item"><i
+                  class="fab fa-github"></i></a>
+              <!-- linkedin icon -->
+              <li class=""><a href="https://www.linkedin.com/in/monerah-altamimi/" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+              </li>
+            </nav>
+          </div>
+          <div class="footer-info">
+            <p>&copy; 2021 Monerah Altamimi</p>
+          </div>
+        </div>
+        <!-- End of Footer -->
+      </footer>
+      <!-- End of Page container -->
+  </div>
+  <script>
+    /* @ https://developers.google.com/web/tools/workbox/guides/get-started */
+    // Check if the service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+      })
+    }
+  </script>
+</body>
+
+</html>

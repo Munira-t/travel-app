@@ -1,0 +1,44 @@
+@import 'config';
+
+/*Footer */
+footer {
+  grid-area: footer;
+  text-align: center;
+  font-family: $font-stack;
+}
+
+.footer-container {
+  font-size: 13px;
+  padding: 60px 0;
+}
+
+.footer-items {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+
+  .footer-items__social {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: $light-color;
+      display: inline-block;
+      font-size: 20px;
+      text-align: center;
+      margin-right: 10px;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.footer-info {
+  color: $light-color;
+
+  a {
+    color: $light-color;
+  }
+}
