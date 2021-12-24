@@ -55,7 +55,7 @@ app.listen(port, (err) => {
  * 
  */
 const geonamesBaseURL = 'http://api.geonames.org'
-// const restcountriesBaseURL = 'https://restcountries.eu/rest/v2/alpha'
+const restcountriesBaseURL = 'https://restcountries.eu/rest/v2/alpha'
 const weatherbitBaseURL = 'https://api.weatherbit.io/v2.0/current?'
 const pixabayBaseURL = 'http://pixabay.com/api'
 
@@ -98,27 +98,27 @@ app.post('/destination', async (req, res) => {
 })
 
 
-// /* Setup route '/countryflag' to recive POST requiest. */
-// app.post('/countryflag', async (req, res) => {
-//   /* Get country Code from the client side. */
-//   const countryCode = req.body.countryCode
+/* Setup route '/countryflag' to recive POST requiest. */
+app.post('/countryflag', async (req, res) => {
+  /* Get country Code from the client side. */
+  const countryCode = req.body.countryCode
 
-//   /*Fetch data from restcountries and assign recived data to the response constant. */
-//   const response = await fetch(`${restcountriesBaseURL}/${countryCode}`)
-//   try {
-//     /* Convert the recived data into json and assign it to the restcountriesData constant. */
-//     const restcountriesData = await response.json()
+  /*Fetch data from restcountries and assign recived data to the response constant. */
+  const response = await fetch(`${restcountriesBaseURL}/${countryCode}`)
+  try {
+    /* Convert the recived data into json and assign it to the restcountriesData constant. */
+    const restcountriesData = await response.json()
 
-//     /* Send the object 'recived_geonamesData' that contain the spacify data to the client side */
-//     res.send(
-//       (recived_restcountriesData = {
-//         countryFlag: restcountriesData.flag
-//       })
-//     ) /* Handle error if occur */
-//   } catch (error) {
-//     console.error(error.message)
-//   }
-// })
+    /* Send the object 'recived_geonamesData' that contain the spacify data to the client side */
+    res.send(
+      (recived_restcountriesData = {
+        countryFlag: restcountriesData.flag
+      })
+    ) /* Handle error if occur */
+  } catch (error) {
+    console.error(error.message)
+  }
+})
 
 
 /* Setup route '/weather' to recive POST requiest. */
