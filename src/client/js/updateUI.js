@@ -7,8 +7,6 @@ const updateUI = (tripInfo) => {
   <section class="trip-section">
     <div class="trip-container">
       <div class="trip-header" id="trip-header">
-        <!-- <div class="city-flag"> -->
-        <img class="city-flag" src=${tripInfo.countryFlag} alt="flag" id="city-flag">
         <div class="location-name">
           <h2 id="country-name">${tripInfo.countryName}</h2>
           <p id="city-name">${tripInfo.destCityName}</p>

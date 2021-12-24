@@ -58,12 +58,12 @@ async function handleSubmit() {
       console.log(geoData)
       console.log(tripInfo)
 
-      postData('http://localhost:8087/countryflag', {
-        countryCode: tripInfo.countryCode
-      }).then((restcountriesData) => {
-        tripInfo.countryFlag = restcountriesData.countryFlag
-        console.log(tripInfo);
-      })
+      // postData('http://localhost:8087/countryflag', {
+      //   countryCode: tripInfo.countryCode
+      // }).then((restcountriesData) => {
+      //   tripInfo.countryFlag = restcountriesData.countryFlag
+      //   console.log(tripInfo);
+      // })
       /* call postData() to get data from Weatherbit api from the server by passing url and lang and */
       postData('http://localhost:8087/weather', {
         lang: tripInfo.lang,
