@@ -88,6 +88,11 @@ npm install
 |   `npm run start`    |  Run project  |
 |    `npm run test`    | test project  |
 
+
+## Demo
+[TripIt App live](https://trip-it-m.herokuapp.com/)
+
+
 ## Acknowledgements
 
 - [Font Awesome](https://fontawesome.com)
