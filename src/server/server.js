@@ -40,10 +40,10 @@ app.get('/', (req, res) => {
 })
 
 /* Setup server to run on port: 8087 */
-const port = 8087
+const port = process.env.PORT || 8087
 app.listen(port, (err) => {
   if (err) throw new Error(err)
-  console.log(`Server is running on port https://localhost:${port} !!`)
+  console.log(`Server is running on port http://localhost:${port} !!`)
 })
 
 
