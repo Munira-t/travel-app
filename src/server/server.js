@@ -39,8 +39,8 @@ app.get('/', (req, res) => {
   // res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-/* Setup server to run on port: 8087 */
-const port = process.env.PORT || 8087
+/* Setup server to run on port: 8086 */
+const port = process.env.PORT || 8086
 app.listen(port, (err) => {
   if (err) throw new Error(err)
   console.log(`Server is running on port http://localhost:${port} !!`)

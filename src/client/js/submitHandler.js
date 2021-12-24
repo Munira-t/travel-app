@@ -44,7 +44,7 @@ async function handleSubmit() {
     alert('The arrive date can not be befor departure date')
   } else {
     /* call postData() to get data from geoname api from the server by passing url and destinationCity */
-    postData('http://localhost:8087/destination', {
+    postData('http://localhost:8086/destination', {
       destinationCity
     }).then((geoData) => {
       /** 
@@ -58,24 +58,24 @@ async function handleSubmit() {
       console.log(geoData)
       console.log(tripInfo)
 
-      postData('http://localhost:8087/countryflag', {
+      postData('http://localhost:8086/countryflag', {
         countryCode: tripInfo.countryCode
       }).then((restcountriesData) => {
         tripInfo.countryFlag = restcountriesData.countryFlag
         console.log(tripInfo);
       })
       /* call postData() to get data from Weatherbit api from the server by passing url and lang and */
-      postData('http://localhost:8087/weather', {
+      postData('http://localhost:8086/weather', {
         lang: tripInfo.lang,
         lat: tripInfo.lat
       }).then((weatherData) => {
         tripInfo.weatherDescription = weatherData.weatherDescription
         tripInfo.weatherTemp = weatherData.weatherTemp
         tripInfo.weatherIcon = weatherData.weatherIcon
-        console.log(tripInfo);
+        console.log(tsripInfo);
       })
       /* call postData() to get image from pixabay api from the server by passing destinationCity */
-      postData('http://localhost:8087/image', {
+      postData('http://localhost:8086/image', {
         destCityName: tripInfo.destCityName
       }).then((data) => {
         tripInfo.image = data.image
