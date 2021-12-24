@@ -58,12 +58,12 @@ async function handleSubmit() {
       console.log(geoData)
       console.log(tripInfo)
 
-      postData('http://localhost:8086/countryflag', {
-        countryCode: tripInfo.countryCode
-      }).then((restcountriesData) => {
-        tripInfo.countryFlag = restcountriesData.countryFlag
-        console.log(tripInfo);
-      })
+      // postData('http://localhost:8086/countryflag', {
+      //   countryCode: tripInfo.countryCode
+      // }).then((restcountriesData) => {
+      //   tripInfo.countryFlag = restcountriesData.countryFlag
+      //   console.log(tripInfo);
+      // })
       /* call postData() to get data from Weatherbit api from the server by passing url and lang and */
       postData('http://localhost:8086/weather', {
         lang: tripInfo.lang,
@@ -72,7 +72,7 @@ async function handleSubmit() {
         tripInfo.weatherDescription = weatherData.weatherDescription
         tripInfo.weatherTemp = weatherData.weatherTemp
         tripInfo.weatherIcon = weatherData.weatherIcon
-        console.log(tsripInfo);
+        console.log(tripInfo);
       })
       /* call postData() to get image from pixabay api from the server by passing destinationCity */
       postData('http://localhost:8086/image', {
