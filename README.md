@@ -90,6 +90,8 @@ npm install
 
 
 ## Demo
+![](https://github.com/Munira-t/travel-app/blob/main/images/Tripit-demo.gif)
+
 [TripIt App live](https://trip-it-m.herokuapp.com/)
 
 
